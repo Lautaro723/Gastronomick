@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <title>Gastronomick</title>
+    <style>
+    /* Estilos generales */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+         background-image: url('gmk.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#login-section{
+margin: 0px;
+  
+}
+
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos del menú */
+    .menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      margin: 15px 10px;
+      background: blue;
+      color: blue;
+    }
+
+    .menu .icon {
+      color: #333;
+      font-size: 20px;
+      margin-right: 5px;
+      background: blue;
+    }
+
+    /* Estilos del menú desplegable */
+    .dropdown-content {
+      display: none;
+      background: absolute;
+      background: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    /* Estilos del menú desplegable - Opciones */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Estilos del menú desplegable - Mostrar opciones */
+    .menu:hover .dropdown-content {
+      display: block;
+      background: blue;
+    }
+    .caga{
+        padding: 10px;
+        background: blue;
+    }
+    .login{
+    margin: 75px 15px;
+        background: #f2f2f2;
+        width: 290px;
+        text-align:center;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+        height: 300px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    #btn{
+    padding: 5px;
+    margin: 10px;
+        border-style:none;
+        width: 150px;
+        height: auto;
+        border-radius: 4px;
+        color:black;
+        font-size:19px;
+        background: #fff;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    }
+    img{
+    float:left;
+        width: 20px;
+        height: 20px;
+    }
+   .titulo{
+        margin: 10px;
+        background: #f2f2f2;
+    }
+    #welcome-section{
+        background: #fff;
+    }
+    
+    .TyC{
+         background: #f2f2f2;
+        color: blue;
+        text-decoration:none;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+</head>
+<body>
+  <div id="login-section">
+  <div class="login">
+        <h1 class="titulo">iniciar secion</h1>
+    <button id="btn" class="icon-google" onclick="loginWithGoogle()"><img src="images.png" alt="">Google</button>
+    <button id="btn" class="icon-google" onclick="loginWithGoogle()"><img src="facebook.png" alt="">Facebook</button>
+    <button id="btn" class="icon-google" onclick="loginWithGoogle()"><img src="github.jpg" alt="">github</button>
+    <br><br>
+    <a class="TyC" href="seguridadGMK.txt"donwload oncluck="">seguridad y privasidad </a>
+  </div>
+  </div>
+  
+  
+  
+  
+      
+
+  <div id="welcome-section" style="display: none;">
+ 
+   
+   
+   <!DOCTYPE html>
+<html>
+<head>
+  <title>Red Social</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .post {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #post-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #post-button {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#"onclick="logout()">Serrar secion</a></li>
+      <li><a href="#">Config</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Publicaciones</h2>
+    <div class="post">
+      <h3>Título de la publicación</h3>
+      <p>Contenido de la publicación...</p>
+    </div>
+    <div class="post">
+      <h3>Otra publicación</h3>
+      <p>Otro contenido interesante...</p>
+    </div>
+    <form id="post-form">
+      <textarea id="post-input" placeholder="Escribe una publicación..."></textarea>
+      <button type="submit" id="post-button">Publicar</button>
+    </form>
+  </main>
+  <script>
+    // JavaScript
+    document.getElementById('post-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+
+      var postInput = document.getElementById('post-input');
+      var postContent = postInput.value.trim(); // Elimina espacios en blanco al inicio y al final
+
+      if (postContent !== '') {
+        // Crea un nuevo elemento de publicación
+        var postElement = document.createElement('div');
+        postElement.classList.add('post');
+
+        // Crea los elementos internos de la publicación
+        var titleElement = document.createElement('h3');
+        titleElement.textContent = 'Nueva publicación';
+
+        var contentElement = document.createElement('p');
+        contentElement.textContent = postContent;
+
+        // Añade los elementos internos a la publicación
+        postElement.appendChild(titleElement);
+        postElement.appendChild(contentElement);
+
+        // Añade la publicación al contenedor de publicaciones
+        var postContainer = document.querySelector('main');
+        postContainer.insertBefore(postElement, postContainer.firstChild);
+
+        // Limpia el campo de entrada
+        postInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
+
+   
+   
+   
+   
+   
+   
+   
+    </div>
+      
+  </div>
+  </div>  
+   
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    // Inicializa la aplicación de Firebase con tu configuración
+    var firebaseConfig = {
+      apiKey: "AIzaSyD9qaiRgNFW7SOtaSNMa0KmKwXy4-fQ8H8",
+      authDomain: "gastronomick-74e21.firebaseapp.com",
+      projectId: "gastronomick-74e21",
+      storageBucket: "gastronomick-74e21.appspot.com",
+      messagingSenderId: "429075323026",
+      appId: "1:429075323026:web:cf258cdbe35618b9b46e4b",
+      measurementId: "G-6G62F6HX4J"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Verificar el estado de autenticación
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // El usuario está autenticado
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("welcome-section").style.display = "block";
+        document.getElementById("welcome-message").textContent = "Bienvenido, " + user.displayName + "!";
+      } else {
+        // El usuario no está autenticado
+        document.getElementById("login-section").style.display = "block";
+        document.getElementById("welcome-section").style.display = "none";
+      }
+    });
+
+    // Función para manejar el inicio de sesión con Google
+    function loginWithGoogle() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider)
+        .then(function(result) {
+          // El usuario ha iniciado sesión correctamente
+          window.location.reload(); // Recarga la página para mostrar la sección de bienvenida
+        })
+        .catch(function(error) {
+          // Hubo un error en el inicio de sesión con Google
+          console.error(error);
+        });
+    }
+
+    // Función para cerrar sesión
+    function logout() {
+      firebase.auth().signOut()
+        .then(function() {
+          // El usuario ha cerrado sesión correctamente
+          window.location.reload(); // Recarga la página para mostrar la sección de inicio de sesión
+        })
+        .catch(function(error) {
+          // Hubo un error en el cierre de sesión
+          console.error(error);
+        });
+    }
+  </script>
+</body>
+</html>
